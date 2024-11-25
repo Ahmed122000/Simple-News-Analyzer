@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>SAH Analyzer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="Logo">
+                SAH Analyzer
+            </div>
+            <div class="navigation">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form id="urlForm" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="url" placeholder="Enter URL" required>
+                    <button id="submitButton" type="submit">Submit</button>
+                </form>
+                
+            </section>
+
+            <section>
+                <strong>Analysis Results:</strong>
+                <div id="results">
+                    <p id="polarity">Polarity: </p>
+                    <p id="subjectivity">Subjectivity: </p>
+                    <table class="result-table" id="positive">
+                        <tr>
+                            <th>Positive Snippets: No Text</th>
+                        </tr>
+                    </table>
+                    <table class="result-table" id="neutral">
+                        <tr>
+                            <th>Neutral Snippets: No Text</th>
+                        </tr>
+                    </table>
+                    <table class="result-table" id="negative">
+                        <tr>
+                            <th>Negative Snippets: No Text </th>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <ul class="socials">
+                <li>
+                    <a href="https://www.facebook.com/superahmedh/">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Ahmed122000">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ahmed-hesham-7978481b4/">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+             </ul>
+
+             <div class="copyright">
+                <h6>copyright@2024</h6>
+                <h6>updated by: Ahmed Hesham</h6>
+             </div>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./service-worker.js');
+                });
+            }
+        </script>
+    
+
+    </body>
+</html>
