@@ -32,7 +32,7 @@ This project is part of the **Udacity Front-End Web Developer Nanodegree**.
 2. Install dependencies:
 
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 ## Scripts
